@@ -83,19 +83,16 @@ int main(void)
 	int i = array_size;
     for(i = 0; i < array_size; i++)
     {
-		printf("Input your number for array[%d]: ", i);
       	if (!scanf("%d", &a[i]))
    		{
 			printf("ERROR. Must enter an integer.");
 			return EXIT_FAILURE;
 		}
     }
-    printf("=== Array before Sorting = ");
     printArray(&a[0], array_size);
 
     inPlaceSort(&a[0], array_size);
 
-    printf("=== Array after Sorting = ");
     printArray(&a[0], array_size);
 	return EXIT_SUCCESS;
 }
